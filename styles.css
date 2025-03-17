@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(85, 152, 158);
+}
+
+h1 {
+    color: red;
+    font-family: monospace;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    color: rgb(32, 32, 196);
+    font-family: monospace;
+    text-align: center;
+}
+
+.btn-div {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+    width: max-content;
+    padding: 10px 30px;
+    background-color: rgb(55, 167, 55);
+    color: rgb(0, 0, 0);
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.copy {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: red;
+    display: flex;
+    padding: 5px;
+    font-family: monospace;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+h5 {
+    font-size: 15px;
+    padding: 25px;
+}
