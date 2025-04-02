@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(85, 152, 158);
+    background-color: #587fa7;
 }
 
 h1 {
-    color: red;
+    color: #a5def1;
     font-family: monospace;
     font-size: 40px;
     text-align: center;
@@ -11,9 +11,42 @@ h1 {
 }
 
 h2 {
-    color: rgb(32, 32, 196);
+    color: #a5def1;
+    font-size: 25px;
     font-family: monospace;
     text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #a5def1;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
+
+h4 {
+    color: #b8b8b8;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
+
+h5 {
+    font-size: 15px;
+    padding: 25px;
+}
+
+.contratar-btn {
+    font-family: monospace;
+    font-size: 13px;
+    width: max-content;
+    padding: 10px 15px;
+    background-color: #50bda3;
+    color: rgb(95, 95, 95);
+    border: 3px solid #a5def1;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .btn-div {
@@ -30,9 +63,9 @@ h2 {
     font-size: 20px;
     width: max-content;
     padding: 10px 30px;
-    background-color: rgb(55, 167, 55);
-    color: rgb(0, 0, 0);
-    border: 3px solid black;
+    background-color: #86e3ce;
+    color: rgb(95, 95, 95);
+    border: 3px solid #a5def1;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -47,7 +80,7 @@ h2 {
 p {
     border: 3px solid black;
     border-radius: 8px;
-    background-color: red;
+    background-color: #ccabdb;
     display: flex;
     padding: 5px;
     font-family: monospace;
@@ -56,7 +89,68 @@ p {
     align-items: center;
 }
 
-h5 {
-    font-size: 15px;
-    padding: 25px;
+.eliminar-btn {
+    font-family: monospace;
+    font-size: 13px;
+    width: max-content;
+    padding: 10px 15px;
+    background-color: #50bda3;
+    color: rgb(95, 95, 95);
+    border: 3px solid #a5def1;
+    border-radius: 10px;
+    cursor: pointer
 }
+
+#form-container {
+    font-family: monospace;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 0; 
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 400px;
+    background-color: #ccabdb;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: none; 
+}
+
+#form-container.active {
+    display: block; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none; 
+}
+
+.overlay.active {
+    display: block;
+}
+
+.btn-agregar-servicio {
+    font-family: monospace;
+    font-size: 15px;
+    width: max-content;
+    padding: 10px 15px;
+    background-color: #50bda3;
+    color: rgb(53, 53, 53);
+    border: 3px solid #a5def1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+h3.agregar-servicio {
+    color: black;
+}
+
