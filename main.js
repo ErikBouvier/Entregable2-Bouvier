@@ -1,16 +1,33 @@
-// Array de servicios 
-const servicios = [
-    { id: 1, profesion: 'Electricista', precio: 50 },
-    { id: 2, profesion: 'Plomero', precio: 60 },
-    { id: 3, profesion: 'Carpintero', precio: 70 },
-    { id: 4, profesion: 'Programador', precio: 100 },
-    { id: 5, profesion: 'Veterinario', precio: 80 },
-    { id: 6, profesion: 'Escribano', precio: 90 },
-    { id: 7, profesion: 'Profesor de educacion fisica', precio: 65 },
-    { id: 8, profesion: 'Profesor de musica', precio: 75 },
-    { id: 9, profesion: 'Abogado', precio: 110 },
-    
-];
+// Array vacio para guardar los servicios, que se cargaran desde el JSON
+let servicios = [];
+
+// Utilizamos fetch para cargar los servicios desde un archivo JSON
+function cargarServicios() {
+    fetch('servicios.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar los servicios');
+            }
+            return response.json();
+        })
+        .then(data => {
+            servicios = data;
+            if (mostrandoServicios) {
+                mostrarServicios();
+            }
+        })
+        .catch(error => {
+            console.error('Error de fetch:', error);
+            Swal.fire({
+                title: 'Error',
+                text: 'No se pudieron cargar los servicios.',
+                icon: 'error'
+            });
+        });
+}
+
+cargarServicios();
+
 
 // Array para guardar los servicios contratados
 let serviciosContratados = JSON.parse(localStorage.getItem('contratados')) || []
